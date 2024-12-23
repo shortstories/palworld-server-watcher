@@ -2,7 +2,7 @@
 FROM node:18.14.2-alpine AS node
 
 # Set up base
-FROM alpine:latest
+FROM alpine:3.17
 
 # Metadata
 LABEL maintainer="hello@dnwjn.dev" \
