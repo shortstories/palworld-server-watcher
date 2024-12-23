@@ -119,7 +119,7 @@ check_for_stop() {
         shutdown_now=false
         players_output=$(docker exec -i "$CONTAINER_NAME" rconcli ShowPlayers)
 
-        if [ "$players_output" = "name,playeruid,steamid" ]; then
+        if [ "$players_output" = "> RCON: name,playeruid,steamid" ]; then
             now=$(date +%s)
 
             if [ "$shutdown_scheduled_at" != false ]; then
